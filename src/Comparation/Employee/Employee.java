@@ -20,6 +20,7 @@ class Test1 {
         System.out.println("After Sorting");
         Collections.sort(list,new NameComparator());
         System.out.println(list);
+        System.out.println();
     }
 }
 
