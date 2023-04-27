@@ -2,14 +2,18 @@ package Collection.ArrayList1;
 
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class ArrayListEx {
+public class ArrayListMethods {
     public static void main(String[] args) {
         ArrayList <String> arrayList1 = new ArrayList<>(3);
         arrayList1.add("Zaur");
         arrayList1.add("Ivan");
         arrayList1.add("Mariya");
+        arrayList1.add("Maksud");
+        for (String l:
+             arrayList1) {
+            System.out.println(l);
+        }
 
 
         ArrayList <String> arrayList2 = new ArrayList<>(arrayList1);
