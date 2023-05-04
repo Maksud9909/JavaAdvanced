@@ -1,7 +1,6 @@
-package Collection.ArrayList1;
+package Collection.ArrayList1.ArrayList;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ArrayListMethods2 {
     public static void main(String[] args) {
