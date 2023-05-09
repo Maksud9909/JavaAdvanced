@@ -1,4 +1,4 @@
-package Collection.ArrayList1.LinkedList;
+package Collection.LinkedList;
 
 import java.util.LinkedList;
 
