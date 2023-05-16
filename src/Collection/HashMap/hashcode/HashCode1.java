@@ -1,8 +1,6 @@
 package Collection.HashMap.hashcode;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class HashCode1 {
     public static void main(String[] args) {
@@ -20,6 +18,8 @@ public class HashCode1 {
         System.out.println(result);
         System.out.println(st1.hashCode());
         System.out.println(st4.hashCode());
+
+
     }
 
 }
