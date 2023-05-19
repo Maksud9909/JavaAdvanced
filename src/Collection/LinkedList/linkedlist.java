@@ -24,7 +24,6 @@ public class linkedlist {
         Student2 student7 = new Student2("Anton",3);
         linkedList.add(0,student6);
         linkedList.remove(1);
-
         System.out.println("Linked List = " + linkedList);
 
 

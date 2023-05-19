@@ -10,7 +10,7 @@ public class listIterator {
         List<Character> list = new LinkedList<>();
 
         for (char ch:
-             s.toCharArray()) {
+             s.toCharArray()) { // он здесь их превращает в буквы то есть в char
             list.add(ch);
         }
         ListIterator<Character> listIterator = list.listIterator();
