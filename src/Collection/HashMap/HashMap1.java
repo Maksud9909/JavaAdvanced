@@ -8,6 +8,7 @@ public class HashMap1 {
         HashMap<Integer,String> pasport = new HashMap<>();
         pasport.put(123,"Maksud Rustamov");
         pasport.put(324,"Pirt Shojalilov");
+        System.out.println(pasport.keySet());
 
 
         HashMap<Integer,String> passport2 = new HashMap<>();
