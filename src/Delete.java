@@ -1,16 +1,12 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Delete {
     public static void main(String[] args) {
-        Integer[] arr = {1, 1,3,3,3,3};
-
-        List<Integer> list = Arrays.asList(arr);
-        System.out.println(list);
-
-
-
+        int arr [] = {1,2,3,4,4,5,6};
+        System.out.println();
 
     }
-
 }
