@@ -4,13 +4,13 @@ import java.util.*;
 
 public class HashCode1 {
     public static void main(String[] args) {
-        Map<Student,Double> map = new HashMap<>();
+        Map<Student,Integer> map = new HashMap<>();
         Student st1 = new Student("Maksud","Rustamov",1);
         Student st2 = new Student("Murad","Rustamov",3);
         Student st3 = new Student("Nafisa","Jumaeva",5);
-        map.put(st1,5.6);
-        map.put(st2,4.6);
-        map.put(st3,3.4);
+        map.put(st1,1);
+        map.put(st2,234);
+        map.put(st3,2345);
         System.out.println(map);
 
         Student st4 = new Student("Maksud","Rustamov",1);
