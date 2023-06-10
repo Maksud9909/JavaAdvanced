@@ -8,9 +8,9 @@ public class HashCode1 {
         Student st1 = new Student("Maksud","Rustamov",1);
         Student st2 = new Student("Murad","Rustamov",3);
         Student st3 = new Student("Nafisa","Jumaeva",5);
-        map.put(st1,1);
+        map.put(st1,456);
         map.put(st2,234);
-        map.put(st3,2345);
+        map.put(st3,245);
         System.out.println(map);
 
         Student st4 = new Student("Maksud","Rustamov",1);
@@ -18,6 +18,13 @@ public class HashCode1 {
         System.out.println(result);
         System.out.println(st1.hashCode());
         System.out.println(st4.hashCode());
+
+        System.out.println("-------");
+
+
+        for (Map.Entry<Student,Integer> entry: map.entrySet()){
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
 
 
     }
@@ -54,6 +61,8 @@ class Student {
 
     @Override
     public int hashCode() {
-        return name.length() * 7 + surname.length() * 11 + course * 53;
+        return name.length() * 7 + surname.length() * 134 + course * 53;
     }
+    // hashcode - это когда результаты превращаются в int, чтобы они не были одинаковыми
+    // затем эти элементы умножаются и получаются разные значения, чем больше цифры, тем меньше будет совпадений
 }
