@@ -31,10 +31,10 @@ public class HashCode1 {
 
 }
 
-class Student {
-    String name;
-    String surname;
-    int course;
+final class Student {
+     final String name;
+    final String surname;
+     final int course;
 
     public Student(String name, String surname, int course) {
         this.name = name;
