@@ -5,12 +5,13 @@ import java.util.List;
 
 public class Test1 {
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,8,5,4,4,5,3,3,5,3,5,5,5,5);
-        System.out.println(list);
-        Collections.sort(list);
-        System.out.println(list);
-        int result = Collections.binarySearch(list,4);
-        System.out.println(result);
+        List <Integer> list = new ArrayList<>();
+        list.add(170);
+        list.add(18);
+        show(list);
+    }
+    static void show (List<? extends Number> list){
+        System.out.println("Elements " + list);
     }
 
 }
