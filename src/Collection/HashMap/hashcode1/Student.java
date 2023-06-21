@@ -2,7 +2,7 @@ package Collection.HashMap.hashcode1;
 
 import java.util.Objects;
 
-public final class Student {
+public final class Student implements Comparable<Student>{
     final String name;
     final String surname;
     final int course;
@@ -33,6 +33,19 @@ public final class Student {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname, course);
+    }
+
+    @Override
+    public int compareTo(Student anotherStudent) {
+        int result = 0;
+        result = this.name.compareTo(anotherStudent.name);
+        if (result == 0){
+            result = this.surname.compareTo(anotherStudent.surname);
+            if (result == 0){
+                result = this.course - anotherStudent.course;
+            }
+        }
+        return result;
     }
 
     // hashcode - это когда результаты превращаются в int, чтобы они не были одинаковыми
