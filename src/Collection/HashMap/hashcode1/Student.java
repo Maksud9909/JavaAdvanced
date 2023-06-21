@@ -32,8 +32,9 @@ public final class Student {
 
     @Override
     public int hashCode() {
-        return name.length() * 7 + surname.length() * 134 + course * 53;
+        return Objects.hash(name, surname, course);
     }
+
     // hashcode - это когда результаты превращаются в int, чтобы они не были одинаковыми
     // затем эти элементы умножаются и получаются разные значения, чем больше цифры, тем меньше будет совпадений
 }
