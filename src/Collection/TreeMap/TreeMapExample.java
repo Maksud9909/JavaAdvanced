@@ -22,6 +22,7 @@ public class TreeMapExample {
         treeMap.put(9.0,st5);
         treeMap.put(4.2,st2);
         System.out.println(treeMap);
+        System.out.println(treeMap.get(7.5));
         System.out.println(treeMap.tailMap(7.0)); // он показывает все ключи выше 7
         System.out.println(treeMap.headMap(7.0)); // он показывает все ключи ниже 7
         System.out.println(treeMap.lastEntry());
