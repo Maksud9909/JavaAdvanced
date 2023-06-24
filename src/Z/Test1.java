@@ -6,14 +6,12 @@ import java.util.*;
 
 public class Test1 {
     public static void main(String[] args) {
-        TreeMap<Integer,String> treeMap = new TreeMap<>();
-        treeMap.put(10,"Eco-Bozor");
-        treeMap.put(20,"Kuyluk");
-        System.out.println(treeMap.firstEntry());
+        HashMap <String,Integer> hashMap = new HashMap<>();
+        hashMap.put("Maksud",18);
+        hashMap.put("Maksud",18);
+        System.out.println(hashMap);
 
-        TreeMap<Character,String> key = new TreeMap<>();
-        key.put('M',"Maksud");
-        System.out.println(key);
+
 
 
     }
