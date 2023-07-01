@@ -1,6 +1,6 @@
 package NestedClass;
 
-public class Test {
+public class Test1 {
     static class A {} // статичный inner класс
     class B{} //  просто inner class
 
