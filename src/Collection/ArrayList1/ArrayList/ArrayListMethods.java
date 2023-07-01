@@ -14,8 +14,6 @@ public class ArrayListMethods {
              arrayList1) {
             System.out.println(l);
         }
-
-
         ArrayList <String> arrayList2 = new ArrayList<>(arrayList1);
         System.out.println(arrayList2);
         System.out.println(arrayList2==arrayList1);

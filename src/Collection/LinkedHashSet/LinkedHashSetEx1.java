@@ -2,6 +2,7 @@ package Collection.LinkedHashSet;
 
 import java.util.LinkedHashSet;
 
+
 public class LinkedHashSetEx1 {
     public static void main(String[] args) {
         LinkedHashSet<Integer> hashSet = new LinkedHashSet<>(16,0.75f);
