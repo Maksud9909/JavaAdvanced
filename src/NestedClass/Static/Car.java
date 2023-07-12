@@ -5,10 +5,17 @@ public class Car {
     int doorCount;
     Engine engine;
 
-    public Car(String color, int doorCount, Engine engine) {
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public Car(String color, int doorCount) {
         this.color = color;
         this.doorCount = doorCount;
-        this.engine = engine;
     }
 
     @Override
@@ -19,7 +26,7 @@ public class Car {
                 ", engine=" + engine +
                 '}';
     }
-    public static class Engine {
+    public  class Engine {
         int horsePower;
         public Engine(int horsePower) {
             this.horsePower = horsePower;
@@ -37,10 +44,11 @@ public class Car {
 
 class Test {
     public static void main(String[] args) {
-        Car.Engine engine = new Car.Engine(134);
-        System.out.println(engine);
 
-        Car car= new Car("Red",4,engine);
+
+        Car car = new Car("Yellow",4);
+        Car.Engine engine = car.new Engine(159);
+        car.setEngine(engine);
         System.out.println(car);
     }
 }
