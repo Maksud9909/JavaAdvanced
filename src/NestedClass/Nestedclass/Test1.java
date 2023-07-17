@@ -1,4 +1,4 @@
-package NestedClass;
+package NestedClass.Nestedclass;
 
 public class Test1 {
     static class A {} // статичный inner класс
