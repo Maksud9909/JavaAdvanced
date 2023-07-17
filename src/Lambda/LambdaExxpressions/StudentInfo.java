@@ -13,30 +13,30 @@ public class StudentInfo {
     }
 
 
-//    void printStudentsOverGrade(ArrayList <Student> ar, double grade){
-//        for (Student st:
-//             ar) {
-//            if (st.avgGrade>grade){
-//                System.out.println(st.avgGrade + " nice score " + st.name);
-//            }
-//        }
-//    }
-//    void printStudentsUnderAge(ArrayList <Student> ar, int age){
-//        for (Student st:
-//             ar) {
-//            if (st.age>age){
-//                System.out.println(st.name + " is " + st.age + " years old");
-//            }
-//        }
-//    }
-//    void printStudentsMixCondition(ArrayList <Student> ar, int age,double grade, char sex){
-//        for (Student st:
-//             ar) {
-//            if (st.age > age && st.avgGrade >= grade && st.sex == sex){
-//                System.out.println(st);
-//            }
-//        }
-//    }
+    void printStudentsOverGrade(ArrayList <Student> ar, double grade){
+        for (Student st:
+             ar) {
+            if (st.avgGrade>grade){
+                System.out.println(st.avgGrade + " nice score " + st.name);
+            }
+        }
+    }
+    void printStudentsUnderAge(ArrayList <Student> ar, int age){
+        for (Student st:
+             ar) {
+            if (st.age>age){
+                System.out.println(st.name + " is " + st.age + " years old");
+            }
+        }
+    }
+    void printStudentsMixCondition(ArrayList <Student> ar, int age,double grade, char sex){
+        for (Student st:
+             ar) {
+            if (st.age > age && st.avgGrade >= grade && st.sex == sex){
+                System.out.println(st);
+            }
+        }
+    }
 }
 
 class Test {
