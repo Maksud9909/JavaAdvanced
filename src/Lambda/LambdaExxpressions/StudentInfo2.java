@@ -1,5 +1,6 @@
 package Lambda.LambdaExxpressions;
 
+import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
@@ -7,21 +8,23 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Objects;
 
+import java.util.function.Predicate;
 public class StudentInfo2 {
-    void testStudents (ArrayList<Student> arrayList , StudentCheck2 studentCheck2){
+    void testStudents (@NotNull ArrayList<Student> arrayList , Predicate<Student> predicate){
         for(Student st: arrayList){
-            if (studentCheck2.check(st)){
+            if (predicate.test(st)){
                 System.out.println(st);
             }
         }
     }
 }
 
+
 class Test2 {
     public static void main(String[] args) {
         Student student1 = new Student("Maksud", 'm', 18, 1, 4.5);
         Student student2 = new Student("Umar", 'm', 17, 2, 5);
-        Student student3 = new Student("Murad", 'm', 19, 3, 3);
+        Student student3 = new Student("Murad", 'f', 19, 3, 3);
         Student student4 = new Student("Hamidullo", 'm', 24, 4, 4.3);
         Student student5 = new Student("Madina", 'f', 17, 1, 3);
         ArrayList<Student> students = new ArrayList<>();
@@ -34,54 +37,25 @@ class Test2 {
         System.out.println(students);
 
 
-//        Collections.sort(students, new Comparator<Student>() {
-//            @Override
-//            public int compare(Student st1, Student st2) {
-//                int result = 0;
-//                return st1.age - st2.age;
-//            }
-//        });
-//        System.out.println(students);
-
-
         Collections.sort(students,(Student st1,Student st2)->{
             return st1.age - st2.age;
         });
         System.out.println(students);
+        System.out.println("------");
 
 
+        info.testStudents(students, student -> student.age>17 && student.name.equals("Maksud"));
+        System.out.println("-------");
 
-//        info.testStudents(students, new StudentCheck2() {
-//            @Override
-//            public boolean check(Student student) {
-//                return student.avgGrade>=4.5;
-//            }
-//        });
-//        System.out.println("------");
-//
-//
-//        info.testStudents(students, student -> student.age>17 && student.name.equals("Maksud"));
-//
-//        System.out.println("-------");
-//        info.testStudents(students, new StudentCheck2() {
-//            @Override
-//            public boolean check(Student student) {
-//                return student.avgGrade>4;
-//            }
-//        });
-//
-//        System.out.println("-------");
-//
-//        info.testStudents(students,(Student student) -> {
-//            return student.sex == 'f';
-//        });
-//
-//        System.out.println("-----");
-//
-//        StudentCheck2 st = (Student student) -> {
-//            return student.name.equals("Maksud");
-//        };
-//        info.testStudents(students, st);
+
+        info.testStudents(students,(Student student) -> {
+            return student.sex == 'f';
+        });
+        System.out.println("-----");
+
+        Predicate<Student> predicate1 = student -> student.age > 18;
+        Predicate<Student> predicate2 = student -> student.sex == 'f';
+        info.testStudents(students,predicate1.negate());
 
 
 
@@ -96,8 +70,12 @@ class Test2 {
 }
 
 
-interface StudentCheck2 {
-    boolean check(Student student);
-}
 
-
+//        Collections.sort(students, new Comparator<Student>() {
+//            @Override
+//            public int compare(Student st1, Student st2) {
+//                int result = 0;
+//                return st1.age - st2.age;
+//            }
+//        });
+//        System.out.println(students);
