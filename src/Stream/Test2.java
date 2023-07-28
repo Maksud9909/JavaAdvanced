@@ -11,8 +11,9 @@ public class Test2 {
         list.add("Rayxona");
         list.add("Masha");
         list.add("Donty");
-        List<String> list1 = list.stream().filter(str -> str.length() > 4).collect(Collectors.toList());
+        List<String> list1 = list.stream().filter(name-> name.length() > 5).collect(Collectors.toList());
+        List<String> list2 = list.stream().sorted().collect(Collectors.toList());
+        System.out.println(list2);
         System.out.println(list1);
-        System.out.print("hh");
     }
 }

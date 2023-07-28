@@ -15,7 +15,7 @@ public class Test1 {
         list.add("Madina");
         System.out.println(list);
 
-        System.out.println(list.stream().map(str -> str.length()).collect(Collectors.toList()));
+        System.out.println(list.stream().map(str -> str.length()).collect(Collectors.toSet()));
 
         int array [] = {1,2,4,5,6,64,3,3};
        int arr [] = Arrays.stream(array).map(ints -> {
