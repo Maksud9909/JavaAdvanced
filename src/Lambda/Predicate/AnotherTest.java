@@ -13,12 +13,14 @@ public class AnotherTest {
     }
     public static void main(String[] args) {
     AnotherTest info =  new AnotherTest();
-    ItWorker itWorker1 = new ItWorker("Maksud",18,"Rustamov");
-    ItWorker itWorker2 = new ItWorker("Anton",19,"Sokolo");
     ArrayList<ItWorker> workers = new ArrayList<>();
+    ItWorker itWorker1 = new ItWorker("Maksud",18,"Rustamov");
+    ItWorker itWorker2 = new ItWorker("Anton",19,"Sokolov");
+    ItWorker itWorker3 = new ItWorker("Xamidulo",23,"Xamidovich");
     workers.add(itWorker2);
     workers.add(itWorker1);
-    info.testWorkers(workers,itWorker ->  itWorker.age < 19 );
+    workers.add(itWorker3);
+    info.testWorkers(workers,itWorker ->  itWorker.age > 18 );
 }
 
 
