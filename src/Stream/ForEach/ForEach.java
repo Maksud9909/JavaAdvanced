@@ -8,7 +8,13 @@ public class ForEach {
         Arrays.stream(arr).forEach(numbers -> {
             numbers *= 2;
             System.out.print(numbers + " ");
+
         });
+        System.out.println();
+        System.out.println("-----");
+
+        Arrays.stream(arr).forEach(num -> System.out.print(num + " "));
+        Arrays.stream(arr).forEach(System.out::println);
 
     }
 }

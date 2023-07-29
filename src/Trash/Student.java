@@ -1,4 +1,4 @@
-package Lambda.LambdaExxpressions;
+package Trash;
 
 public class Student {
     public String name;

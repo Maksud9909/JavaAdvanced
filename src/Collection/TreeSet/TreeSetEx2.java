@@ -44,7 +44,7 @@ class Student implements Comparable <Student>{
     @Override
     public String
     toString() {
-        return "Student{" +
+        return "Trash.Student{" +
                 "name='" + name + '\'' +
                 ", course=" + course +
                 '}';

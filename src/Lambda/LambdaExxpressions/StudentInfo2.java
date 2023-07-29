@@ -71,9 +71,9 @@ class Test2 {
 
 
 
-//        Collections.sort(students, new Comparator<Student>() {
+//        Collections.sort(students, new Comparator<Trash.Student>() {
 //            @Override
-//            public int compare(Student st1, Student st2) {
+//            public int compare(Trash.Student st1, Trash.Student st2) {
 //                int result = 0;
 //                return st1.age - st2.age;
 //            }

@@ -39,7 +39,7 @@ class Student{
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Trash.Student{" +
                 "name='" + name + '\'' +
                 ", sex=" + sex +
                 ", age=" + age +
@@ -52,7 +52,7 @@ class Student{
 //    public boolean equals(Object o) {
 //        if (this == o) return true;
 //        if (o == null || getClass() != o.getClass()) return false;
-//        Student student = (Student) o;
+//        Trash.Student student = (Trash.Student) o;
 //        return sex == student.sex && age == student.age && course == student.course && Double.compare(student.avgGrade, avgGrade) == 0 && Objects.equals(name, student.name);
 //    }
 }
