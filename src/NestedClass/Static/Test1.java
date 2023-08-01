@@ -33,7 +33,7 @@ public class Test1 {
 
     @Override
     public String toString() {
-        return "Test1{" +
+        return "Pupil{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", watch=" + watch +

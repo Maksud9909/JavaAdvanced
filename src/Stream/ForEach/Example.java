@@ -9,11 +9,7 @@ public class Example {
 
         int arr2 [] = {1,2,3,4,4,3,2,4,4,4,5,67,8,7,8};
 
-
        Arrays.stream(arr2).sorted().forEach(num-> System.out.print(num + " "));
-
-
-
     }
 }
 
