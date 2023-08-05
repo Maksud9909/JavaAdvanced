@@ -1,13 +1,14 @@
-package Stream.MinMaxT;
+package Stream.Limit;
 
 import Stream.Student;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class MinMax {
+public class Limit {
     public static void main(String[] args) {
         Student student1 =  new Student("Murod",'m',34,3,9.6);
         Student student2 =  new Student("Jessi",'f',23,4,8.5);
@@ -17,13 +18,7 @@ public class MinMax {
         Student student6 =  new Student("Anton",'f',25,3,8.9);
         List<Student> list = Arrays.asList(student1,student2,student3,student6,student4,student5);
 
-        Optional<Student> result = list.stream().max(new Comparator<Student>() {
-            @Override
-            public int compare(Student st1, Student st2) {
-                return st1.age - st2.age;
-            }
-        });
+        List<Student> result  = list.stream().filter(student -> student.age>=20).limit(2).collect(Collectors.toList());
         System.out.println(result);
-
     }
 }
