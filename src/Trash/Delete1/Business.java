@@ -1,7 +1,5 @@
-package Delete1;
+package Trash.Delete1;
 
-import javax.management.DescriptorKey;
-import java.io.BufferedInputStream;
 import java.util.*;
 
  class Test {
@@ -16,9 +14,6 @@ import java.util.*;
         System.out.println(businessList);
         Collections.sort(businessList,new CompanyNumberOfEmployees());
         System.out.println(businessList);
-
-
-
     }
 }
 

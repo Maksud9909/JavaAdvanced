@@ -1,4 +1,4 @@
-package Delete1;
+package Trash.Delete1;
 
 import java.lang.instrument.Instrumentation;
 

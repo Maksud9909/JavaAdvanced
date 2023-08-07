@@ -1,6 +1,6 @@
-package CollectTerminal;
+package Stream.CollectTerminal;
 
-import Trash2.Pupil;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,9 @@ public class Partitioning {
         listPupil.add(pupil4);
         listPupil.add(pupil5);
 
-        Map<Boolean, List<Pupil>> result = listPupil.stream().collect(Collectors.partitioningBy(pupil -> pupil.getClas()==4));
+        Map<Boolean, List<Pupil>> result = listPupil.stream()
+                .collect(Collectors
+                        .partitioningBy(pupil -> pupil.getScore()==4));
         result.forEach((aBoolean, pupils) -> {
             if (aBoolean == true){
                 System.out.println(pupils);

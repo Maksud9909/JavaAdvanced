@@ -1,6 +1,6 @@
-package CollectTerminal;
+package Stream.CollectTerminal;
 
-import Trash2.Pupil;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +24,7 @@ public class GrouppingBy {
         Map<Integer,List<Pupil>> result = listPupil.stream().map(pupil -> {
             pupil.setName(pupil.getName().toUpperCase());
             return pupil;
-        }).collect(Collectors.groupingBy(pupil -> pupil.getClas()));
+        }).collect(Collectors.groupingBy(pupil -> pupil.getGroup()));
         result.forEach((integer, pupils) -> {
             System.out.println(integer.toString() + " " + pupils);
 
