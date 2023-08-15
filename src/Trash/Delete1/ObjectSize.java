@@ -3,22 +3,37 @@ package Trash.Delete1;
 import java.lang.instrument.Instrumentation;
 
 public class ObjectSize {
-    private static Instrumentation instrumentation;
+    public static void main(String[] args) throws InterruptedException {
+        Multi multi = new Multi();
+        Multi2 multi2 = new Multi2();
 
-    public static void premain(String args, Instrumentation inst) {
-        instrumentation = inst;
+
+
     }
+}
 
-    public static long getObjectSize(Object obj) {
-        if (instrumentation == null) {
-            throw new IllegalStateException("Instrumentation not initialized");
+class Multi extends Thread{
+    static int counter = 0;
+    public static synchronized void plus (){
+        counter++;
+    }
+    @Override
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+            plus();
         }
-        return instrumentation.getObjectSize(obj);
+        System.out.println("result " + counter);
     }
-
-    public static void main(String[] args) {
-        int[] myArray = {1, 2, 3, 4, 5};
-        long sizeInBytes = getObjectSize(myArray);
-        System.out.println(sizeInBytes);  // Выводит размер в байтах
+}
+class Multi2 extends Thread{
+    @Override
+    public void run() {
+        System.out.println("Hello");
+        for (int i = 10; i < 20; i++) {
+            System.out.println(i);
+            Multi.plus();
+        }
+        System.out.println("result " + Multi.counter);
     }
 }
