@@ -10,7 +10,7 @@ public class Test {
 
         @Override
         public String toString() {
-            return "Test2{" +
+            return "Employ{" +
                     "faculty='" + faculty + '\'' +
                     '}';
         }
