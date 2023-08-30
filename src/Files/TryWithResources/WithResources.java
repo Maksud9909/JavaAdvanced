@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class WithResources {
     public static void main(String[] args) throws IOException {
-        try(FileReader reader = new FileReader("test2.txt");
+        try(FileReader reader = new FileReader("test3.txt");
             FileWriter writer = new FileWriter("test2.txt",true)) {
             int character;
             while ((character=reader.read())!=-1) {
