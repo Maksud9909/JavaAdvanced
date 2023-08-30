@@ -14,7 +14,7 @@ public class FileWriterEx {
         FileWriter writer = null;
 
         try {
-            writer = new FileWriter("test2.txt",true);
+            writer = new FileWriter("test3.txt",true);
             writer.write(rubai);
             writer.append("Privet");
             System.out.println("Done");
