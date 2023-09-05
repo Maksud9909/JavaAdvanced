@@ -1,10 +1,7 @@
 package Trash;
 
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class Example1 {
     public static void main(String[] args) throws IOException {
@@ -35,9 +32,13 @@ public class Example1 {
 
 
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Names.txt"))){
-            writer.write(names);
+        try (BufferedReader reader = new BufferedReader(new FileReader("Names.txt"));
+             BufferedWriter writer = new BufferedWriter(new FileWriter("CopyNames.txt"));
+        ){
+            String line;
+            while ((line = reader.readLine()) != null){
+                writer.write(line);
+            }
         }
     }
-
 }
