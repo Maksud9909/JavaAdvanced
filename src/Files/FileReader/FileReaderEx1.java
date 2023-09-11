@@ -8,9 +8,9 @@ import java.io.IOException;
 
 public class FileReaderEx1 {
     public static void main(String[] args) throws IOException {
-        FileReader fileReader = null;
-        try {
-            fileReader = new FileReader("test1.txt");
+
+        try (FileReader fileReader  = new FileReader("test3.txt");){
+
             int character;
             while ((character = fileReader.read())!=-1){
                 System.out.print((char) character);
@@ -20,9 +20,7 @@ public class FileReaderEx1 {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        finally {
-            fileReader.close();
-        }
+
     }
 }
 
