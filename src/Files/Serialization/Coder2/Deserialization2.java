@@ -1,18 +1,18 @@
 package Files.Serialization.Coder2;
 
-import Comparation.Employee.Employee;
+import Files.Serialization.Coder1.Student;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-public class Serialization2 {
+public class Deserialization2 {
     public static void main(String[] args) throws ClassNotFoundException {
-        Employee bestEmployee;
+        Student bestEmployee;
         try(ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("Employees2.bin"))){
 
-            bestEmployee = (Employee) inputStream.readObject();
+            bestEmployee = (Student) inputStream.readObject();
             System.out.println(bestEmployee);
 
         } catch (FileNotFoundException e) {

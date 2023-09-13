@@ -7,7 +7,7 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Serialization1 {
+public class Deserialization1 {
     public static void main(String[] args) {
         List<String> employees = new ArrayList<>();
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("employee1.bin"))){
