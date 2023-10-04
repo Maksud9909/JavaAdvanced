@@ -1,4 +1,4 @@
-package Files.Serialization.Coder1;
+package Files.Serialization;
 
 import java.io.Serializable;
 

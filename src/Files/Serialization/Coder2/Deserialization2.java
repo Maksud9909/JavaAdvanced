@@ -1,6 +1,6 @@
 package Files.Serialization.Coder2;
 
-import Files.Serialization.Coder1.Student;
+import Files.Serialization.Student;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

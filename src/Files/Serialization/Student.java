@@ -1,4 +1,6 @@
-package Files.Serialization.Coder1;
+package Files.Serialization;
+
+import Files.Serialization.Car;
 
 import java.io.Serializable;
 
