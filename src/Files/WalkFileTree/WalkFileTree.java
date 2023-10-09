@@ -11,7 +11,6 @@ public class WalkFileTree {
     }
 }
 
-
 class MyFileVisitor implements FileVisitor<Path>{
 
     @Override
