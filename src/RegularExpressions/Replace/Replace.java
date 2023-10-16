@@ -1,4 +1,4 @@
-package RegularExpressions.RegEx.Replace;
+package RegularExpressions.Replace;
 
 public class Replace {
     public static void main(String[] args) {

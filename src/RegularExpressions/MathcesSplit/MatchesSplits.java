@@ -1,4 +1,4 @@
-package RegularExpressions.RegEx.MathcesSplit;
+package RegularExpressions.MathcesSplit;
 
 import java.util.Arrays;
 

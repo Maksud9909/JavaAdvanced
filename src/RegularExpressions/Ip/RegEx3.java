@@ -1,4 +1,4 @@
-package RegularExpressions.RegEx.Ip;
+package RegularExpressions.Ip;
 
 import java.util.regex.Pattern;
 
