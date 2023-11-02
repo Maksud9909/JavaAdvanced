@@ -26,7 +26,7 @@ class Test1 {
 
 public class Employee implements Comparable <Employee>{
     int id;
-    String name;
+    public String name;
     String surname;
     int salary;
 
