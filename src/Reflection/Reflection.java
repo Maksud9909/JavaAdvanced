@@ -14,6 +14,22 @@ public class Reflection {
         System.out.println(Arrays.toString(constructor.getParameters()));
         Constructor [] constructors = employeeClass1.getConstructors();
         Arrays.stream(constructors).forEach(constructor1 -> System.out.println(Arrays.toString(constructor1.getParameters())));
+        System.out.println("-------");
+
+
+
+        Class<?> personClass1 = Class.forName("Reflection.Person");
+
+        Constructor constructor1 = personClass1.getConstructor(String.class,String.class,int.class);
+        System.out.println(Arrays.toString(constructor1.getParameters()));
+
+
+
+
+
+
+
+
     }
 }
 
