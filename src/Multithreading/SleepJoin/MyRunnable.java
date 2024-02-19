@@ -16,10 +16,14 @@ public class MyRunnable extends Thread {
     
     public static void main(String[] args) throws InterruptedException {
         Thread thread1 = new Thread(new Ex1());
+        thread1.setName("First Thread");
         MyRunnable thread2 = new MyRunnable();
+        thread2.setName("Second Thread");
         thread1.start();
         thread2.start();
         thread1.join();
+        thread2.join();
+
 
 
 

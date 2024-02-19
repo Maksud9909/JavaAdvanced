@@ -1,28 +1,25 @@
 package Multithreading.DataRace;
 
-public class DataRaceEx2 {
-    static int counter = 0;
-    public static synchronized void increment(){
-        counter++;
-    }
-    public static void main(String[] args) throws InterruptedException {
-        Thread thread1 = new Thread(new R());
-        Thread thread2 = new Thread(new R());
-        thread1.start();
-        thread2.start();
-        thread2.join();
-        thread1.join();
+import Trash.Test9;
 
-        System.out.println(counter);
-    }
-}
+public class DataRaceEx2 implements Runnable{
 
-class R implements Runnable {
+    public static void main(String[] args) {
+        Thread thread = new Thread(new DataRaceEx2());
+        thread.start();
+    }
 
     @Override
     public void run() {
-        for (int i = 0; i < 1200; i++) {
-            DataRaceEx2.increment();
+        for (int i = 0; i < 1000; i++) {
+
         }
+    }
+}
+
+class Counter2{
+    static int counter = 0;
+    public static void increment(){
+        counter++;
     }
 }

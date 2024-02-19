@@ -2,7 +2,7 @@ package Multithreading.Volatile;
 
 public class Volatile extends Thread {
 
-    volatile boolean aBoolean = true;
+     boolean aBoolean = true;
     @Override
     public void run() {
         long counter = 0;
