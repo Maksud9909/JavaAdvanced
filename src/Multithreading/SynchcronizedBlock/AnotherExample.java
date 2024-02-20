@@ -25,7 +25,7 @@ public class AnotherExample {
         synchronized (lock) {
             System.out.println("WhatsApp call starts");
             try {
-                Thread.sleep(5000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -36,7 +36,7 @@ public class AnotherExample {
         synchronized (lock){
         System.out.println("Skype call starts");
         try {
-            Thread.sleep(6000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
