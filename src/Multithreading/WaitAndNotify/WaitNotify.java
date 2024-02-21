@@ -1,7 +1,6 @@
 package Multithreading.WaitAndNotify;
 
 public class WaitNotify {
-
     public static void main(String[] args) {
         Market market = new Market();
         Producer producer = new Producer(market);
@@ -10,15 +9,14 @@ public class WaitNotify {
         Thread thread2 = new Thread(consumer);
         thread1.start();
         thread2.start();
-
     }
 
 }
 
 class Market {
-    private int breadCount = 5;
+    private int breadCount = 0;
     public synchronized void getBread()  {
-        while (breadCount<1){
+        while (breadCount < 1){
             try {
                 wait();
             } catch (InterruptedException e) {
@@ -39,11 +37,11 @@ class Market {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            breadCount++;
-            System.out.println("Producer add 1 bread to the market ");
-            System.out.println("Quantity of bread " + breadCount);
-            notify();
         }
+        breadCount++;
+        System.out.println("Producer add 1 bread to the market ");
+        System.out.println("Quantity of bread " + breadCount);
+        notify();
     }
 }
 
@@ -67,6 +65,8 @@ class Producer implements Runnable{
         }
     }
 }
+
+
 
 
 class Consumer implements Runnable {
