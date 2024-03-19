@@ -15,7 +15,7 @@ public class WaitNotify {
 
 class Market {
     private int breadCount = 0;
-    public synchronized void getBread()  {
+    public synchronized void takeBread()  {
         while (breadCount < 1){
             try {
                 wait();
@@ -79,7 +79,7 @@ class Consumer implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
-            market.getBread();
+            market.takeBread();
         }
     }
 }

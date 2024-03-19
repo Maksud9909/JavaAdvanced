@@ -2,6 +2,7 @@ package Multithreading.SynchcronizedBlock;
 
 public class AnotherExample {
     static final Object lock = new Object();
+    static final Object lock2 = new Object();
     public static void main(String[] args) {
         Thread thread1 = new Thread(new RunnableMobile());
         Thread thread2 = new Thread(new RunnableWhatsApp());
